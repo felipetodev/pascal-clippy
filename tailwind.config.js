@@ -9,7 +9,11 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      backgroundImage: {
+        clippy: 'radial-gradient(at center center, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))'
+      }
+    }
   },
-  plugins: []
+  plugins: [require('@headlessui/tailwindcss')]
 }
