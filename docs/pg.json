@@ -1,0 +1,55 @@
+{
+  "tokens": 1151,
+  "pdfs": [
+    {
+      "title": "AÑO ACADÉMICO 2023",
+      "date": "02/03/2023",
+      "content": "COMUNICADO N°1 Sobre las Clases online A nuestra Comunidad Educativa: El sistema Educacional de Chile define que las clases para Enseñanza Básica y Media son de carácter presencial. La modalidad de clases online no es reconocida legalmente por el Ministerio de Educación. Producto de la pandemia, durante los años 2020 y 2021, como una medida extraordinaria, la autoridad educativa permitió y promovió la implementación de las clases remotas, con la finalidad de poder enfrentar la crisis sanitaria y no interrumpir los procesos educativos de los estudiantes del país. A partir del año 2022, se retomó la modalidad de clases presenciales y se exigió a los colegios implementarlas en un 100%, quedando la modalidad online sólo para situaciones de emergencia sanitaria, siendo la autoridad competente la encargada de determinar dichos eventos. Colegio Instituto Pascal, acatando las instrucciones de las autoridades, implementó en 2022 la presencialidad en el 100% de su jornada escolar; sin embargo, se autorizó, en casos muy particulares, justificados y respaldados, la posibilidad para que algunos estudiantes se conectarán de manera online en algunas ocasiones, durante el año. En este año 2023, como parte de su servicio educativo, Colegio Instituto Pascal mantendrá la posibilidad de clases online, pero de una manera más restrictiva, para solicitarlo se deberá cumplir con ciertos requisitos y adjuntar medios de respaldo, los que serán analizados en su mérito para aprobar o rechazar la solicitud. Casos a considerar para solicitar acceso a clases online: 1. Caso confirmado de Covid Positivo del estudiante. Para esta situación, se exigirá como medio de respaldo un PCR o Antígeno positivo, aplicado en laboratorios certificados. Cabe señalar que ya no se considerarán los posibles contactos estrechos como argumento para solicitar acceso a clases online. 2. Enfermedades con licencia médica prologada y la exigencia de reposo igual o superior a cinco días. Para este tipo de situaciones se exigirá la licencia emitida por el profesional de la salud. Cabe señalar que si la licencia es por menos de 5 días, no se aceptará la solicitud de clases bajo la modalidad online. AÑO ACADÉMICO 2023 Página 2 de 2 3. Por viajes fuera de la ciudad o el país. Para este tipo de situaciones se exigirán los pasajes que acrediten el viaje. Estos viajes deben responder a causa de fuerza mayor de parte de los padres o apoderados, que obligue al estudiante a viajar con ellos. Procedimientos de solicitud y respuesta: 1. Las solicitudes deberán realizarla por escrito los apoderados, entregando toda la información necesaria que justifique la solicitud, adjuntando los documentos que la respalden (PCR o Antígenos aplicados por laboratorios acreditados con la identificación nominal del alumno; Licencias Médicas emitidas por profesionales de la salud; bouchers o ticket de embarque que verifiquen las fechas de viaje y la identificación de las personas que viajan). 2. Las solicitudes serán revisadas por el equipo Directivo y se dará respuesta en un plazo de 24 hrs. No habrá respuesta (ni acceso a clases online) de manera inmediata a solicitudes realizadas durante el mismo día del ingreso de ellas. 3. Las solicitudes deberán ser enviadas, vía ticket a través de la libreta de comunicaciones (perfil de apoderado o tutor económico) de la plataforma del colegio (micolegio.institutopascal.cl) y dirigidas al Área: “Clases Online”, sub área “Solicitudes”. Sin otro particular, se despide atentamente, MARCO MÉNDEZ ALTAMIRANO DIRECTOR INSTITUTO PASCAL",
+      "tokens": 1151,
+      "chunks": [
+        {
+          "content_tokens": 174,
+          "content": "COMUNICADO N°1 Sobre las Clases online A nuestra Comunidad Educativa: El sistema Educacional de Chile define que las clases para Enseñanza Básica y Media son de carácter presencial La modalidad de clases online no es reconocida legalmente por el Ministerio de Educación Producto de la pandemia, durante los años 2020 y 2021, como una medida extraordinaria, la autoridad educativa permitió y promovió la implementación de las clases remotas, con la finalidad de poder enfrentar la crisis sanitaria y no interrumpir los procesos educativos de los estudiantes del país",
+          "embedding": [],
+          "pdf_title": "AÑO ACADÉMICO 2023",
+          "pdf_date": "02/03/2023"
+        },
+        {
+          "content_tokens": 188,
+          "content": "A partir del año 2022, se retomó la modalidad de clases presenciales y se exigió a los colegios implementarlas en un 100%, quedando la modalidad online sólo para situaciones de emergencia sanitaria, siendo la autoridad competente la encargada de determinar dichos eventos Colegio Instituto Pascal, acatando las instrucciones de las autoridades, implementó en 2022 la presencialidad en el 100% de su jornada escolar; sin embargo, se autorizó, en casos muy particulares, justificados y respaldados, la posibilidad para que algunos estudiantes se conectarán de manera online en algunas ocasiones, durante el año",
+          "embedding": [],
+          "pdf_title": "AÑO ACADÉMICO 2023",
+          "pdf_date": "02/03/2023"
+        },
+        {
+          "content_tokens": 176,
+          "content": "En este año 2023, como parte de su servicio educativo, Colegio Instituto Pascal mantendrá la posibilidad de clases online, pero de una manera más restrictiva, para solicitarlo se deberá cumplir con ciertos requisitos y adjuntar medios de respaldo, los que serán analizados en su mérito para aprobar o rechazar la solicitud Casos a considerar para solicitar acceso a clases online: 1 Caso confirmado de Covid Positivo del estudiante Para esta situación, se exigirá como medio de respaldo un PCR o Antígeno positivo, aplicado en laboratorios certificados",
+          "embedding": [],
+          "pdf_title": "AÑO ACADÉMICO 2023",
+          "pdf_date": "02/03/2023"
+        },
+        {
+          "content_tokens": 198,
+          "content": "Cabe señalar que ya no se considerarán los posibles contactos estrechos como argumento para solicitar acceso a clases online 2 Enfermedades con licencia médica prologada y la exigencia de reposo igual o superior a cinco días Para este tipo de situaciones se exigirá la licencia emitida por el profesional de la salud Cabe señalar que si la licencia es por menos de 5 días, no se aceptará la solicitud de clases bajo la modalidad online AÑO ACADÉMICO 2023 Página 2 de 2 3 Por viajes fuera de la ciudad o el país Para este tipo de situaciones se exigirán los pasajes que acrediten el viaje",
+          "embedding": [],
+          "pdf_title": "AÑO ACADÉMICO 2023",
+          "pdf_date": "02/03/2023"
+        },
+        {
+          "content_tokens": 189,
+          "content": "Estos viajes deben responder a causa de fuerza mayor de parte de los padres o apoderados, que obligue al estudiante a viajar con ellos Procedimientos de solicitud y respuesta: 1 Las solicitudes deberán realizarla por escrito los apoderados, entregando toda la información necesaria que justifique la solicitud, adjuntando los documentos que la respalden (PCR o Antígenos aplicados por laboratorios acreditados con la identificación nominal del alumno; Licencias Médicas emitidas por profesionales de la salud; bouchers o ticket de embarque que verifiquen las fechas de viaje y la identificación de las personas que viajan) 2",
+          "embedding": [],
+          "pdf_title": "AÑO ACADÉMICO 2023",
+          "pdf_date": "02/03/2023"
+        },
+        {
+          "content_tokens": 203,
+          "content": "Las solicitudes serán revisadas por el equipo Directivo y se dará respuesta en un plazo de 24 hrs No habrá respuesta (ni acceso a clases online) de manera inmediata a solicitudes realizadas durante el mismo día del ingreso de ellas 3 Las solicitudes deberán ser enviadas, vía ticket a través de la libreta de comunicaciones (perfil de apoderado o tutor económico) de la plataforma del colegio (micolegio.institutopascal.cl) y dirigidas al Área: “Clases Online”, sub área “Solicitudes” Sin otro particular, se despide atentamente, MARCO MÉNDEZ ALTAMIRANO DIRECTOR INSTITUTO PASCAL.",
+          "embedding": [],
+          "pdf_title": "AÑO ACADÉMICO 2023",
+          "pdf_date": "02/03/2023"
+        }
+      ]
+    }
+  ]
+}
