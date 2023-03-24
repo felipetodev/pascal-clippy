@@ -176,9 +176,9 @@ export default function Home () {
             </button>
           )}
         </div>
-        <hr className="h-px bg-gray-700 border-1 dark:bg-gray-700" />
+        <hr className="h-px mb-10 bg-gray-700 border-1 dark:bg-gray-700" />
         {answer.length > 0 && (
-          <div className="space-y-10 my-10 max-w-xl w-full bg-blue-600 rounded-lg p-4 pb-6">
+          <div className="space-y-10 mb-10 max-w-xl w-full bg-blue-600 rounded-lg p-4 pb-6">
             <>
               <div>
                 <h2
