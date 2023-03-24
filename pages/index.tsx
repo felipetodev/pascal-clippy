@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import DropDown from '@/components/DropDown'
 import { Tooltip } from 'react-tooltip'
 import { Toaster, toast } from 'sonner'
-import { AudioRecorder } from 'react-audio-voice-recorder'
 
 import { type LangType, type PDFchunk } from '@/types'
+
+const AudioButton = dynamic(async () => await import('@/components/AudioButton'), { ssr: false })
 
 export default function Home () {
   const [loading, setLoading] = useState(false)
@@ -176,14 +178,7 @@ export default function Home () {
                 'Ej: ¿Como puedo inscribirme a un taller?'
               }
             />
-            <AudioRecorder
-              onRecordingComplete={async (blob) => await getWhisperResponse(blob)}
-              classes={{
-                AudioRecorderStartSaveClass: 'audio-recorder-svg-color',
-                AudioRecorderPauseResumeClass: 'audio-recorder-svg-color',
-                AudioRecorderDiscardClass: 'audio-recorder-svg-color'
-              }}
-            />
+            <AudioButton getWhisperResponse={getWhisperResponse} />
           </div>
 
           {!loading && (
