@@ -1,9 +1,10 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import DropDown from '@/components/DropDown'
 import { Tooltip } from 'react-tooltip'
 import { Toaster, toast } from 'sonner'
+import { AudioRecorder } from 'react-audio-voice-recorder'
 
 import { type LangType, type PDFchunk } from '@/types'
 
@@ -13,6 +14,7 @@ export default function Home () {
   const [query, setQuery] = useState('')
   const [answer, setAnswer] = useState('')
   const [clippyGif, setClippyGif] = useState('https://i.giphy.com/media/13V60VgE2ED7oc/200w.gif')
+  const [whisper, setWhisper] = useState(false)
   // const [chunk, setChunk] = useState<PDFchunk[]>([])
 
   const bioRef = useRef<null | HTMLDivElement>(null)
@@ -82,6 +84,33 @@ export default function Home () {
     setLoading(false)
   }
 
+  const getWhisperResponse = async (recording: Blob) => {
+    setLoading(true)
+    const formData = new FormData()
+    formData.append('file', recording, 'audio.wav')
+
+    try {
+      const response = await fetch('/api/whisper', {
+        method: 'POST',
+        body: formData
+      })
+      if (response.ok) {
+        const { text } = await response.json()
+        setQuery(text)
+        setWhisper(true)
+      }
+    } catch (e) {
+      setLoading(false)
+      return toast.error('Ocurrió un error al procesar tu audio, intenta escribiendo tu pregunta')
+    }
+  }
+
+  // refact this pls :(
+  useEffect(() => {
+    if (!whisper) return
+    handleAnswer()
+  }, [whisper])
+
   return (
     <>
       <Head>
@@ -146,6 +175,14 @@ export default function Home () {
               placeholder={
                 'Ej: ¿Como puedo inscribirme a un taller?'
               }
+            />
+            <AudioRecorder
+              onRecordingComplete={async (blob) => await getWhisperResponse(blob)}
+              classes={{
+                AudioRecorderStartSaveClass: 'audio-recorder-svg-color',
+                AudioRecorderPauseResumeClass: 'audio-recorder-svg-color',
+                AudioRecorderDiscardClass: 'audio-recorder-svg-color'
+              }}
             />
           </div>
 
