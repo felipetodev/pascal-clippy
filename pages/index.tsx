@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import DropDown from '@/components/DropDown'
-// import { Tooltip } from 'react-tooltip'
+import Clippy from '@/components/Clippy'
 import { Toaster, toast } from 'sonner'
 
 import type { LangType, PDFchunk } from '@/types'
@@ -15,7 +14,6 @@ export default function Home () {
   const [language, setLanguage] = useState<LangType>('Español')
   const [query, setQuery] = useState('')
   const [answer, setAnswer] = useState('')
-  const [clippyGif, setClippyGif] = useState('/clippy.gif')
   const [whisper, setWhisper] = useState(false)
   // const [chunk, setChunk] = useState<PDFchunk[]>([])
 
@@ -124,25 +122,7 @@ export default function Home () {
           <h1 className="sm:text-6xl text-4xl max-w-[750px] font-bold text-blue-400">
             Instituto Pascal Assistant
           </h1>
-          <div
-            className='overflow-hidden rounded-full border-4 border-blue-400'
-            onMouseOver={() => {
-              const isHover = clippyGif.includes('/clippy-hover.gif')
-              if (isHover) return
-              setClippyGif('/clippy-hover.gif')
-              const interval = setTimeout(() => setClippyGif('/clippy.gif'), 7500)
-              return () => clearTimeout(interval)
-            }}
-          >
-            <Image
-              className='object-cover aspect-square'
-              height={100}
-              width={100}
-              src={clippyGif}
-              alt='clippy'
-            />
-          </div>
-          {/* <Tooltip id="my-tooltip" place="top" /> */}
+          <Clippy />
         </div>
         <p className="text-blue-300 m-2 font-medium">Powered by OpenAI.</p>
         <div className="max-w-xl w-full">
