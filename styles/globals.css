@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dot-pulse {
+  --uib-size: 30px;
+  --uib-speed: 1.3s;
+  --uib-color: white;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--uib-size);
+  height: calc(var(--uib-size) * 0.27);
+}
+
+.dot-pulse__dot,
+.dot-pulse::before,
+.dot-pulse::after {
+  content: '';
+  display: block;
+  height: calc(var(--uib-size) * 0.18);
+  width: calc(var(--uib-size) * 0.18);
+  border-radius: 50%;
+  background-color: var(--uib-color);
+  transform: scale(0);
+}
+
+.dot-pulse::before {
+  animation: pulse var(--uib-speed) ease-in-out infinite;
+}
+
+.dot-pulse__dot {
+  animation: pulse var(--uib-speed) ease-in-out calc(var(--uib-speed) * 0.125) infinite both;
+}
+
+.dot-pulse::after {
+  animation: pulse var(--uib-speed) ease-in-out calc(var(--uib-speed) * 0.25) infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+.audio-recorder-svg-color {
+  filter: invert(45%) sepia(51%) saturate(1931%) hue-rotate(180deg) brightness(60%) contrast(105%);
+}
+
+.audio-recorder {
+  overflow: hidden;
+  position: absolute;
+  right: 12px;
+  bottom: 16px;
+}
