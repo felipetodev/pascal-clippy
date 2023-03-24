@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import DropDown from '@/components/DropDown'
-import Clippy from '@/components/Clippy'
 import { Toaster, toast } from 'sonner'
 
 import type { LangType, PDFchunk } from '@/types'
 
 const AudioButton = dynamic(async () => await import('@/components/AudioButton'), { ssr: false })
+const Clippy = dynamic(async () => await import('@/components/Clippy'), { ssr: false })
 
 export default function Home () {
   const [loading, setLoading] = useState(false)
