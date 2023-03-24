@@ -33,8 +33,8 @@ export default withFileUpload(async (req, res) => {
   if (response.ok) {
     res.status(200).json({ text })
   } else {
-    console.log('OPEN AI ERROR:')
-    console.log(error.message)
-    res.status(400).send(new Error())
+    console.error('OPEN AI ERROR:')
+    console.error(error.message)
+    res.status(400).send(error.message)
   }
 })
