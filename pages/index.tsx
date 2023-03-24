@@ -6,7 +6,7 @@ import DropDown from '@/components/DropDown'
 import { Tooltip } from 'react-tooltip'
 import { Toaster, toast } from 'sonner'
 
-import { type LangType, type PDFchunk } from '@/types'
+import type { LangType, PDFchunk } from '@/types'
 
 const AudioButton = dynamic(async () => await import('@/components/AudioButton'), { ssr: false })
 
@@ -15,7 +15,7 @@ export default function Home () {
   const [language, setLanguage] = useState<LangType>('Español')
   const [query, setQuery] = useState('')
   const [answer, setAnswer] = useState('')
-  const [clippyGif, setClippyGif] = useState('https://i.giphy.com/media/13V60VgE2ED7oc/200w.gif')
+  const [clippyGif, setClippyGif] = useState('/clippy.gif')
   const [whisper, setWhisper] = useState(false)
   // const [chunk, setChunk] = useState<PDFchunk[]>([])
 
@@ -132,15 +132,15 @@ export default function Home () {
             data-tooltip-variant="info"
             className='overflow-hidden rounded-full border-4 border-blue-400'
             onMouseOver={() => {
-              const isDefault = clippyGif.includes('media.tenor.com')
-              if (isDefault) return
-              setClippyGif('https://media.tenor.com/gieF0Q0PSogAAAAd/clippy.gif')
-              const interval = setTimeout(() => setClippyGif('https://i.giphy.com/media/13V60VgE2ED7oc/200w.gif'), 7500)
+              const isHover = clippyGif.includes('/clippy-hover.gif')
+              if (isHover) return
+              setClippyGif('/clippy-hover.gif')
+              const interval = setTimeout(() => setClippyGif('/clippy.gif'), 7500)
               return () => clearTimeout(interval)
             }}
           >
             <Image
-              className='object-cover block'
+              className='object-cover aspect-square'
               height={100}
               width={100}
               src={clippyGif}
@@ -220,8 +220,6 @@ export default function Home () {
           </div>
         )}
         <Toaster />
-        {/* <Dialog /> */}
-        {/* <SearchButton /> */}
       </div>
     </>
   )
