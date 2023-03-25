@@ -86,6 +86,7 @@ export default function Home () {
 
   const getWhisperResponse = async (recording: Blob) => {
     setLoading(true)
+    setWhisper(false)
     const formData = new FormData()
     formData.append('file', recording, 'audio.wav')
 
@@ -124,7 +125,7 @@ export default function Home () {
           </h1>
           <Clippy />
         </div>
-        <p className="text-blue-300 m-2 font-medium">Powered by OpenAI.</p>
+        <p className="text-blue-300 m-2 font-medium">Powered by ChatGPT.</p>
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
             <p className="text-left font-medium text-blue-200">

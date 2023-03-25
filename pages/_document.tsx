@@ -1,7 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document () {
-  const description = 'Instituto Pascal AI assistant - Powered by OpenAI'
+  const description = 'Instituto Pascal AI assistant - Powered by ChatGPT'
   const sitename = 'institutopascal.ai'
   const title = 'Instituto Pascal AI assistant'
   const ogimage = 'https://www.institutopascal.ai/og-image.png'
