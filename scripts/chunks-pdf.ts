@@ -21,7 +21,7 @@ const months = {
 const CHUNK_SIZE = 200
 
 const getDataFromPDF = async () => {
-  const dataBuffer = fs.readFileSync('./pdf/comunicado.pdf')
+  const dataBuffer = fs.readFileSync('./docs/comunicado.pdf')
 
   const { text } = await new Promise<{ text: string }>((resolve) => {
     pdf(dataBuffer)
@@ -135,7 +135,7 @@ const getChunks = (pdf: PDFparse) => {
       pdfs
     }
 
-    fs.writeFileSync('pdf/pg.json', JSON.stringify(json))
+    fs.writeFileSync('docs/pg.json', JSON.stringify(json))
     console.log('Success ✔')
   } catch (e) {
     console.error(e)

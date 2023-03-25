@@ -7,7 +7,7 @@ import type { PDFchunk, PDFparse } from '@/types'
 const CHUNK_SIZE = 200
 
 const getDataFromWord = async () => {
-  const text = await extractText('./pdf/normativo-1.docx')
+  const text = await extractText('./docs/normativo-2.docx')
 
   return text
     .replace(/\s+/g, ' ')
@@ -110,7 +110,7 @@ const getChunks = (word: PDFparse) => {
       words
     }
 
-    fs.writeFileSync('pdf/normativo1-pg.json', JSON.stringify(json))
+    fs.writeFileSync('docs/normativo2-pg.json', JSON.stringify(json))
     console.log('Success ✔')
   } catch (e) {
     console.log(e)

@@ -55,7 +55,7 @@ const generateEmbeddings = async (pdfs: PDFparse[]) => {
 }
 
 (async () => {
-  const json: PDFJSON = JSON.parse(fs.readFileSync('pdf/normativo1-pg.json', 'utf-8'))
+  const json: PDFJSON = JSON.parse(fs.readFileSync('docs/normativo2-pg.json', 'utf-8'))
   await generateEmbeddings(json.pdfs)
   console.log('DB ✔')
 })()
