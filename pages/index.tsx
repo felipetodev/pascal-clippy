@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import DropDown from '@/components/DropDown'
 import Clippy from '@/components/Clippy'
 import { Toaster, toast } from 'sonner'
+import ReactMarkdown from 'react-markdown'
 
 import type { LangType, PDFchunk } from '@/types'
 
@@ -179,7 +180,7 @@ export default function Home () {
         </div>
         <hr className="h-px mb-10 bg-gray-700 border-1 dark:bg-gray-700" />
         {answer.length > 0 && (
-          <div className="space-y-10 mb-10 max-w-xl w-full bg-blue-600 rounded-lg p-4 pb-6">
+          <div className="space-y-10 mb-10 max-w-2xl w-full bg-blue-600 rounded-lg p-4 pb-6">
             <>
               <div>
                 <h2
@@ -189,9 +190,16 @@ export default function Home () {
                   Clippy respuesta:
                 </h2>
               </div>
-              <div className="space-y-8 flex flex-col text-left items-center text-lg text-white justify-center max-w-xl mx-auto">
-                {answer}
-              </div>
+              <ReactMarkdown
+                className='text-lg text-white text-left'
+                components={{
+                  p: ({ node, ...props }) => <p className='my-2' {...props} />,
+                  ul: ({ node, ...props }) => <ul className='list-disc list-inside' {...props} />,
+                  li: ({ node, ...props }) => <li className='my-2' {...props} />
+                }}
+              >
+                {answer.replaceAll('. ', '.\n\n')}
+              </ReactMarkdown>
             </>
           </div>
         )}
