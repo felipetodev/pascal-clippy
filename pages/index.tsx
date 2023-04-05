@@ -163,7 +163,7 @@ export default function Home () {
               className="bg-blue-500 rounded-xl text-white font-bold px-4 py-2 sm:mt-10 mt-8 hover:bg-blue-400/80 w-full"
               onClick={handleAnswer}
             >
-              Preguntar a Clippy &rarr;
+              Preguntar a Test &rarr;
             </button>
           )}
           {loading && (
