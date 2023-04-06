@@ -130,7 +130,7 @@ export default function Home () {
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
             <p className="text-left font-medium text-blue-200">
-              Selecciona si deseas tu respuesta en algun idioma en especifico:
+              Selecciona si deseas tu respuesta en algún idioma en específico:
             </p>
           </div>
           <div className="block mt-5">
@@ -152,7 +152,7 @@ export default function Home () {
               rows={4}
               className="py-4 px-4 font-medium text-gray-700 w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-2 focus:ring-blue-500 focus:outline-none"
               placeholder={
-                'Ej: ¿Como puedo inscribirme a un taller?'
+                'Ej: ¿Cuáles son los requisitos para inscribirme en un taller?'
               }
             />
             <AudioButton getWhisperResponse={getWhisperResponse} />
@@ -163,7 +163,7 @@ export default function Home () {
               className="bg-blue-500 rounded-xl text-white font-bold px-4 py-2 sm:mt-10 mt-8 hover:bg-blue-400/80 w-full"
               onClick={handleAnswer}
             >
-              Preguntar a Clippy &rarr;
+              Preguntar a Pascal &rarr;
             </button>
           )}
           {loading && (
@@ -187,13 +187,13 @@ export default function Home () {
                   className="sm:text-4xl text-3xl font-bold text-white mx-auto"
                   ref={bioRef}
                 >
-                  Clippy respuesta:
+                  Pascal respuesta:
                 </h2>
               </div>
               <ReactMarkdown
                 className='text-lg text-white text-left'
                 components={{
-                  p: ({ node, ...props }) => <p className='my-2' {...props} />,
+                  p: ({ node, ...props }) => <p className='my-2 inline' {...props} />,
                   ul: ({ node, ...props }) => <ul className='list-disc list-inside' {...props} />,
                   li: ({ node, ...props }) => <li className='my-2' {...props} />
                 }}
